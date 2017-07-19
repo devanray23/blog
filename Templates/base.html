@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	   <title>Devan's Blogz Project</title>
+    </head>
+    <body>
+
+    {% if session.email %}
+    <a href="/home">Home</a>
+    <a href="/users">Users</a>
+    <a href="/newpost">NewPost</a>
+    <a href="/allblogz">View All Blogs</a>
+    <a style="float:right;" href="/logout">Logout</a>
+    {% else %}
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+
+    {% endif %}
+
+    {% block content %}
+
+    {% endblock %}
+    
+    </body>
+</html>

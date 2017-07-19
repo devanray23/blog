@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{title}}</h2>
+
+<hr />
+
+<p>{{body}}</p>
+
+<i><p>Created by <a href="/profile/{{owner.id}}">{{owner.username}}</a></p><i>
+
+{% endblock %}

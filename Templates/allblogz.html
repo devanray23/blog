@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Viewing All Blogs</h1>
+
+<hr />
+
+{% if blogs|length == 0 %}    
+    <p>No blogs yet</p>
+    {% else %}
+    	<ul style="list-style-type:none">
+    	    {% for blog in blogs %}
+    	   <li><h2><a href="/post/{{blog.id}}">{{ blog.title }}</a></h2></li>
+    	   <li name="blogbody">{{blog.body}}</li>
+           {% for owner in owners %}
+                {% if blog.owner == owner %}
+                <li><i><p>Created by <a href="/profile/{{owner.id}}">{{owner.username}}</a></p><i>
+                {% endif %}
+            {% endfor %}
+    	   <hr />
+    	   {% endfor %}
+    	</ul>
+    {% endif %}
+    
+
+{% endblock %}
