@@ -7,6 +7,7 @@ itsdangerous==0.24
 Jinja2==2.9.5
 MarkupSafe==1.0
 PasteDeploy==1.5.2
+psycopg2==2.7.1
 PyMySQL==0.7.9
 SQLAlchemy==1.1.5
 Werkzeug==0.11.10
