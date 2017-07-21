@@ -43,8 +43,7 @@ class Blog(db.Model):
 # Login / Register Controllers
 
 @app.route('/')
-def index():
-	
+def index():	
 	return render_template('index.html')
 
 # Existing Session Handler
