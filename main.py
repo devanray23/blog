@@ -1,5 +1,8 @@
 from flask import Flask, request, redirect, render_template, flash, session
 from flask_sqlalchemy import SQLAlchemy
+import os
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'mysql+pymysql://blogz:password@localhost:8889/blogz')
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
